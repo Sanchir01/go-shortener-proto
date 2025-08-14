@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package user;
+
+option go_package = "shortener.user.v1;userv1";
+
+import "buf/validate/validate.proto";
+
+service User {
+    rpc GetUserById(GetUserByIdRequest) returns(GetUserByIdResponse);
+}
+
+message GetUserByIdRequest{
+    string user_id = 1 [(buf.validate.field).string.uuid = true];
+}
+message GetUserByIdResponse{
+
+}

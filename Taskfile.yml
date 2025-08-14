@@ -1,0 +1,15 @@
+version: "3"
+
+tasks:
+  generate:
+    aliases:
+      - go
+    desc: "Generate code from proto files"
+    cmds:
+      - protoc -I proto proto/**/*.proto --go_out=./gen/go/ --go_opt=paths=source_relative --go-grpc_out=./gen/go/ --go-grpc_opt=paths=source_relative
+  buf:
+    aliases:
+      - rust
+    desc: "Generate Rust code from proto files using prost"
+    cmds:
+      - go tool buf generate --template buf.gen.yaml
