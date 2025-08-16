@@ -13,3 +13,5 @@ tasks:
     desc: "Generate Rust code from proto files using prost"
     cmds:
       - go tool buf generate --template buf.gen.yaml
+  dep:
+    cmd: go tool buf dep update
