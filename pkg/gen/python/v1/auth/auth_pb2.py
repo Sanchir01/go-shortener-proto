@@ -12,9 +12,11 @@ from google.protobuf.internal import builder as _builder
 _sym_db = _symbol_database.Default()
 
 
+from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from google.api import http_pb2 as google_dot_api_dot_http__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x12v1/auth/auth.proto\x12\x04\x61uth\"o\n\x0fRegisterRequest\x12\x14\n\x05phone\x18\x01 \x01(\tR\x05phone\x12\x14\n\x05\x65mail\x18\x02 \x01(\tR\x05\x65mail\x12\x1a\n\x08password\x18\x03 \x01(\tR\x08password\x12\x14\n\x05title\x18\x04 \x01(\tR\x05title\"\"\n\x10RegisterResponse\x12\x0e\n\x02ok\x18\x01 \x01(\tR\x02ok\"@\n\x0cLoginRequest\x12\x14\n\x05\x65mail\x18\x01 \x01(\tR\x05\x65mail\x12\x1a\n\x08password\x18\x02 \x01(\tR\x08password\"q\n\rLoginResponse\x12\x14\n\x05\x65mail\x18\x01 \x01(\tR\x05\x65mail\x12\x14\n\x05phone\x18\x02 \x01(\tR\x05phone\x12\x14\n\x05title\x18\x03 \x01(\tR\x05title\x12\x1e\n\x04role\x18\x04 \x01(\x0e\x32\n.auth.RoleR\x04role\"\x8a\x01\n\x16\x43onfirmRegisterRequest\x12\x14\n\x05phone\x18\x01 \x01(\tR\x05phone\x12\x14\n\x05\x65mail\x18\x02 \x01(\tR\x05\x65mail\x12\x1a\n\x08password\x18\x03 \x01(\tR\x08password\x12\x14\n\x05title\x18\x04 \x01(\tR\x05title\x12\x12\n\x04\x63ode\x18\x05 \x01(\tR\x04\x63ode\"{\n\x17\x43onfirmRegisterResponse\x12\x14\n\x05\x65mail\x18\x01 \x01(\tR\x05\x65mail\x12\x14\n\x05phone\x18\x02 \x01(\tR\x05phone\x12\x14\n\x05title\x18\x03 \x01(\tR\x05title\x12\x1e\n\x04role\x18\x04 \x01(\x0e\x32\n.auth.RoleR\x04role*1\n\x04Role\x12\x14\n\x10ROLE_UNSPECIFIED\x10\x00\x12\t\n\x05\x41\x44MIN\x10\x01\x12\x08\n\x04USER\x10\x02\x32\xc3\x01\n\x04\x41uth\x12\x39\n\x08Register\x12\x15.auth.RegisterRequest\x1a\x16.auth.RegisterResponse\x12\x30\n\x05Login\x12\x12.auth.LoginRequest\x1a\x13.auth.LoginResponse\x12N\n\x0f\x43onfirmRegister\x12\x1c.auth.ConfirmRegisterRequest\x1a\x1d.auth.ConfirmRegisterResponseB_\n\x08\x63om.authB\tAuthProtoP\x01Z\x18shortener.auth.v1;authv1\xa2\x02\x03\x41XX\xaa\x02\x04\x41uth\xca\x02\x04\x41uth\xe2\x02\x10\x41uth\\GPBMetadata\xea\x02\x04\x41uthb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x12v1/auth/auth.proto\x12\x04\x61uth\x1a\x1cgoogle/api/annotations.proto\x1a\x15google/api/http.proto\"o\n\x0fRegisterRequest\x12\x14\n\x05phone\x18\x01 \x01(\tR\x05phone\x12\x14\n\x05\x65mail\x18\x02 \x01(\tR\x05\x65mail\x12\x1a\n\x08password\x18\x03 \x01(\tR\x08password\x12\x14\n\x05title\x18\x04 \x01(\tR\x05title\"\"\n\x10RegisterResponse\x12\x0e\n\x02ok\x18\x01 \x01(\tR\x02ok\"@\n\x0cLoginRequest\x12\x14\n\x05\x65mail\x18\x01 \x01(\tR\x05\x65mail\x12\x1a\n\x08password\x18\x02 \x01(\tR\x08password\"q\n\rLoginResponse\x12\x14\n\x05\x65mail\x18\x01 \x01(\tR\x05\x65mail\x12\x14\n\x05phone\x18\x02 \x01(\tR\x05phone\x12\x14\n\x05title\x18\x03 \x01(\tR\x05title\x12\x1e\n\x04role\x18\x04 \x01(\x0e\x32\n.auth.RoleR\x04role\"\x8a\x01\n\x16\x43onfirmRegisterRequest\x12\x14\n\x05phone\x18\x01 \x01(\tR\x05phone\x12\x14\n\x05\x65mail\x18\x02 \x01(\tR\x05\x65mail\x12\x1a\n\x08password\x18\x03 \x01(\tR\x08password\x12\x14\n\x05title\x18\x04 \x01(\tR\x05title\x12\x12\n\x04\x63ode\x18\x05 \x01(\tR\x04\x63ode\"{\n\x17\x43onfirmRegisterResponse\x12\x14\n\x05\x65mail\x18\x01 \x01(\tR\x05\x65mail\x12\x14\n\x05phone\x18\x02 \x01(\tR\x05phone\x12\x14\n\x05title\x18\x03 \x01(\tR\x05title\x12\x1e\n\x04role\x18\x04 \x01(\x0e\x32\n.auth.RoleR\x04role*1\n\x04Role\x12\x14\n\x10ROLE_UNSPECIFIED\x10\x00\x12\t\n\x05\x41\x44MIN\x10\x01\x12\x08\n\x04USER\x10\x02\x32\xa5\x02\n\x04\x41uth\x12[\n\x08Register\x12\x15.auth.RegisterRequest\x1a\x16.auth.RegisterResponse\" \x82\xd3\xe4\x93\x02\x1a\"\x15/api/v1/auth/register:\x01*\x12O\n\x05Login\x12\x12.auth.LoginRequest\x1a\x13.auth.LoginResponse\"\x1d\x82\xd3\xe4\x93\x02\x17\"\x12/api/v1/auth/login:\x01*\x12o\n\x0f\x43onfirmRegister\x12\x1c.auth.ConfirmRegisterRequest\x1a\x1d.auth.ConfirmRegisterResponse\"\x1f\x82\xd3\xe4\x93\x02\x19\"\x14/api/v1/auth/confirm:\x01*B_\n\x08\x63om.authB\tAuthProtoP\x01Z\x18shortener.auth.v1;authv1\xa2\x02\x03\x41XX\xaa\x02\x04\x41uth\xca\x02\x04\x41uth\xe2\x02\x10\x41uth\\GPBMetadata\xea\x02\x04\x41uthb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -22,20 +24,26 @@ _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'v1.auth.auth_pb2', _globals
 if _descriptor._USE_C_DESCRIPTORS == False:
   _globals['DESCRIPTOR']._options = None
   _globals['DESCRIPTOR']._serialized_options = b'\n\010com.authB\tAuthProtoP\001Z\030shortener.auth.v1;authv1\242\002\003AXX\252\002\004Auth\312\002\004Auth\342\002\020Auth\\GPBMetadata\352\002\004Auth'
-  _globals['_ROLE']._serialized_start=624
-  _globals['_ROLE']._serialized_end=673
-  _globals['_REGISTERREQUEST']._serialized_start=28
-  _globals['_REGISTERREQUEST']._serialized_end=139
-  _globals['_REGISTERRESPONSE']._serialized_start=141
-  _globals['_REGISTERRESPONSE']._serialized_end=175
-  _globals['_LOGINREQUEST']._serialized_start=177
-  _globals['_LOGINREQUEST']._serialized_end=241
-  _globals['_LOGINRESPONSE']._serialized_start=243
-  _globals['_LOGINRESPONSE']._serialized_end=356
-  _globals['_CONFIRMREGISTERREQUEST']._serialized_start=359
-  _globals['_CONFIRMREGISTERREQUEST']._serialized_end=497
-  _globals['_CONFIRMREGISTERRESPONSE']._serialized_start=499
-  _globals['_CONFIRMREGISTERRESPONSE']._serialized_end=622
-  _globals['_AUTH']._serialized_start=676
-  _globals['_AUTH']._serialized_end=871
+  _globals['_AUTH'].methods_by_name['Register']._options = None
+  _globals['_AUTH'].methods_by_name['Register']._serialized_options = b'\202\323\344\223\002\032\"\025/api/v1/auth/register:\001*'
+  _globals['_AUTH'].methods_by_name['Login']._options = None
+  _globals['_AUTH'].methods_by_name['Login']._serialized_options = b'\202\323\344\223\002\027\"\022/api/v1/auth/login:\001*'
+  _globals['_AUTH'].methods_by_name['ConfirmRegister']._options = None
+  _globals['_AUTH'].methods_by_name['ConfirmRegister']._serialized_options = b'\202\323\344\223\002\031\"\024/api/v1/auth/confirm:\001*'
+  _globals['_ROLE']._serialized_start=677
+  _globals['_ROLE']._serialized_end=726
+  _globals['_REGISTERREQUEST']._serialized_start=81
+  _globals['_REGISTERREQUEST']._serialized_end=192
+  _globals['_REGISTERRESPONSE']._serialized_start=194
+  _globals['_REGISTERRESPONSE']._serialized_end=228
+  _globals['_LOGINREQUEST']._serialized_start=230
+  _globals['_LOGINREQUEST']._serialized_end=294
+  _globals['_LOGINRESPONSE']._serialized_start=296
+  _globals['_LOGINRESPONSE']._serialized_end=409
+  _globals['_CONFIRMREGISTERREQUEST']._serialized_start=412
+  _globals['_CONFIRMREGISTERREQUEST']._serialized_end=550
+  _globals['_CONFIRMREGISTERRESPONSE']._serialized_start=552
+  _globals['_CONFIRMREGISTERRESPONSE']._serialized_end=675
+  _globals['_AUTH']._serialized_start=729
+  _globals['_AUTH']._serialized_end=1022
 # @@protoc_insertion_point(module_scope)
